@@ -1,0 +1,6 @@
+# Ignore a specific file
+src/ignoreThisFile.js
+
+# Ignore a directory
+node_modules
+dist

@@ -11,11 +11,15 @@
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,css,html,json}'"
   },
   "dependencies": {
+    "@tanstack/react-form": "^0.41.3",
+    "@tanstack/react-query": "^5.65.1",
+    "@tanstack/react-router": "^1.98.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@tanstack/router-plugin": "^1.98.3",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
