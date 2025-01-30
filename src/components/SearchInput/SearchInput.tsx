@@ -12,7 +12,7 @@ export const SearchInput: FC<SearchInputProps> = ({ className, ...props }) => {
       <input
         type="text"
         placeholder="Search..."
-        className="w-full py-2 pl-10 pr-4 text-sm border rounded-full bg-gray-800 text-white placeholder-blue-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 border-blue-600 disabled:bg-gray-900 disabled:border-gray-800 disabled:text-gray-500"
+        className="w-full py-2 pl-10 pr-4 text-sm border rounded-full bg-gray-800 text-white outline-none placeholder-blue-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 border-blue-600 disabled:bg-gray-900 disabled:border-gray-800 disabled:text-gray-500"
         {...props}
       />
     </div>

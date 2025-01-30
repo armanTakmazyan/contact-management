@@ -8,13 +8,13 @@ export const Search: FC<SVGProps<SVGSVGElement>> = (props) => {
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
+      strokeWidth={2}
       className={`w-4 h-4 ${props.className ?? ''}`}
     >
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={2}
-        d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1 0 10 17.5a7.5 7.5 0 0 0 6.65-3.85z"
+        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
       />
     </svg>
   );

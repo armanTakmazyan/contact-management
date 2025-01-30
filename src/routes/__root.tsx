@@ -4,10 +4,9 @@ import { Sidebar } from '@components/Sidebar';
 export const Route = createRootRoute({
   component: () => (
     <>
-      <div className="w-full h-full flex gap-2 items-start">
+      <div className="w-full h-full flex items-start">
         <Sidebar />
-
-        <div className="w-full">
+        <div className="w-full h-full p-2">
           <Outlet />
         </div>
       </div>
