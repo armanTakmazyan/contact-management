@@ -1,6 +1,6 @@
 export interface ContactInformationProps {
   image: string;
-  name: string;
+  fullName: string;
   username: string;
   description: string;
   onEdit: () => void;
