@@ -15,6 +15,31 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Custom scrollbar for WebKit-based browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937; /* Dark gray */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563; /* Medium gray */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280; /* Light gray on hover */
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 #1f2937;
+}
+
 * {
   box-sizing: border-box;
 }
