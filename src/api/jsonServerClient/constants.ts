@@ -1,0 +1,1 @@
+export const JSON_SERVER_ENDPOINT = import.meta.env.VITE_JSON_SERVER_ENDPOINT;

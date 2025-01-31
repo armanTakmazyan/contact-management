@@ -1,0 +1,1 @@
+export { useUpdateContact } from './useUpdateContact';

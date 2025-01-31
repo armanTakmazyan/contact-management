@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { ContactStartScreen } from '@/components/ContactStartScreen';
 import { createLazyFileRoute } from '@tanstack/react-router';
+import { ContactStartScreen } from '@components/ContactStartScreen';
 
 const Index: FC = () => {
   return (

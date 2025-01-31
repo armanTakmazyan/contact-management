@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Plus as PlusIcon } from '@icons/Plus';
 import { SearchInput } from '@components/SearchInput';
-import { PrimaryRoundedLinkButton } from '@/components/Buttons/PrimaryRoundedLinkButton';
+import { PrimaryRoundedLinkButton } from '@components/Buttons/PrimaryRoundedLinkButton';
 import { ContactList } from '@components/ContactList';
 
 const contacts = [
