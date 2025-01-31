@@ -11,7 +11,7 @@ export const DangerButton: FC<DangerButtonProps> = ({
     <button
       {...props}
       className={clsx(
-        'px-4 py-2 text-sm font-medium bg-red-600 text-white rounded-lg hover:bg-red-500 transition',
+        'px-4 py-2 text-sm font-medium bg-red-600 text-white rounded-lg hover:bg-red-500 cursor-pointer transition',
         className,
       )}
     >

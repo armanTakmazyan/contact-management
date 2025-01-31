@@ -7,3 +7,8 @@ export interface FormInputProps {
   type?: 'text' | 'textarea' | 'file';
   className?: string;
 }
+
+export interface FileInputProps {
+  field: any;
+  acceptedTypes?: string[];
+}

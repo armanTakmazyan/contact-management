@@ -24,7 +24,7 @@ export const ContactForm: FC<ContactFormProps> = ({
       onSubmit(value);
     },
     validators: {
-      onChange: contactSchema,
+      onSubmit: contactSchema,
     },
   });
 

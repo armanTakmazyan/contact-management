@@ -1,7 +1,6 @@
 import { FC } from 'react';
-import clsx from 'clsx';
-import { File as FileIcon } from '@icons/File';
-import { inputBaseClass } from './constants';
+import { FileInput } from './FileInput';
+import { INPUT_BASE_STYLES } from './constants';
 import type { FormInputProps } from './types';
 
 export const FormInput: FC<FormInputProps> = ({
@@ -13,7 +12,7 @@ export const FormInput: FC<FormInputProps> = ({
 }) => {
   return (
     <div className={className}>
-      <label htmlFor={field.name} className="text-gray-400 text-sm block">
+      <label htmlFor={field.name} className="text-gray-400 text-sm block mb-1">
         {label}
       </label>
       {type === 'textarea' ? (
@@ -23,34 +22,11 @@ export const FormInput: FC<FormInputProps> = ({
           value={field.state.value}
           onBlur={field.handleBlur}
           onChange={(e) => field.handleChange(e.target.value)}
-          className={inputBaseClass}
+          className={INPUT_BASE_STYLES}
           placeholder={placeholder}
         />
       ) : type === 'file' ? (
-        <div
-          className={clsx(inputBaseClass, 'flex items-center justify-center')}
-        >
-          <label
-            htmlFor={field.name}
-            className="block w-full text-white cursor-pointer flex items-center justify-center"
-          >
-            <FileIcon className="mr-2" />
-            Upload File
-          </label>
-          <input
-            type="file"
-            accept="image/*"
-            id={field.name}
-            name={field.name}
-            onChange={(e) => {
-              const file = e.target.files?.[0];
-              if (file) {
-                field.setValue(file);
-              }
-            }}
-            className="hidden"
-          />
-        </div>
+        <FileInput field={field} />
       ) : (
         <input
           id={field.name}
@@ -58,7 +34,7 @@ export const FormInput: FC<FormInputProps> = ({
           value={field.state.value}
           onBlur={field.handleBlur}
           onChange={(e) => field.handleChange(e.target.value)}
-          className={inputBaseClass}
+          className={INPUT_BASE_STYLES}
           placeholder={placeholder}
           type={type}
         />

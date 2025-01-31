@@ -1,6 +1,7 @@
 import { FC } from 'react';
+import { Plus as PlusIcon } from '@icons/Plus';
 import { SearchInput } from '@components/SearchInput';
-import { PrimaryRoundedButtonWithIcon } from '@components/Buttons/PrimaryRoundedButtonWithIcon';
+import { PrimaryRoundedLinkButton } from '@/components/Buttons/PrimaryRoundedLinkButton';
 import { ContactList } from '@components/ContactList';
 
 const contacts = [
@@ -20,7 +21,12 @@ export const Sidebar: FC = () => {
       <div className="w-full flex items-center">
         <SearchInput />
         <div className="ml-2">
-          <PrimaryRoundedButtonWithIcon />
+          <PrimaryRoundedLinkButton to="/contact/new">
+            <span className="mr-2">
+              <PlusIcon />
+            </span>
+            New
+          </PrimaryRoundedLinkButton>
         </div>
       </div>
       <div className="mt-2 pt-2 flex-1 border-t border-gray-600 overflow-hidden">
