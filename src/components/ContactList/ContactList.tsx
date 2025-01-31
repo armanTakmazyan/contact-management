@@ -6,6 +6,7 @@ import type { ContactListProps } from './types';
 export const ContactList: FC<ContactListProps> = ({ contacts, className }) => {
   const { id: selectedId } = useParams({ strict: false });
 
+  console.log('selectedId', typeof selectedId);
   return (
     <div
       className={clsx(
@@ -20,7 +21,8 @@ export const ContactList: FC<ContactListProps> = ({ contacts, className }) => {
         {contacts.map((contact) => (
           <Link
             key={contact.id}
-            to={`/contact/${contact.id}`}
+            to="/contact/$id"
+            params={{ id: `${contact.id}` }}
             className={clsx(
               'block px-5 py-3 rounded-lg text-gray-300 text-sm font-medium transition-all',
               selectedId === contact.id
@@ -28,7 +30,7 @@ export const ContactList: FC<ContactListProps> = ({ contacts, className }) => {
                 : 'hover:bg-blue-500/30 hover:text-white',
             )}
           >
-            {contact.name}
+            {contact.fullName}
           </Link>
         ))}
       </div>

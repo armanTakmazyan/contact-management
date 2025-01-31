@@ -6,6 +6,7 @@
       "@api/*": ["./src/api/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@components/*": ["./src/components/*"],
+      "@containers/*": ["./src/containers/*"],
       "@icons/*": ["./src/components/Icons/*"]
     },
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",

@@ -1,9 +1,10 @@
-export interface Contact {
-  id: string;
-  name: string;
+import { Contacts } from '@api/jsonServerService/types';
+
+export interface ContactListSkeletonProps {
+  className?: string;
 }
 
 export interface ContactListProps {
-  contacts: Contact[];
+  contacts: Contacts;
   className?: string;
 }
