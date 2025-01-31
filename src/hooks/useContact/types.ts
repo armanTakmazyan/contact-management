@@ -2,7 +2,7 @@ import { UseQueryResult } from '@tanstack/react-query';
 import { Contact } from '@api/jsonServerService/types';
 
 export interface UseContactArgs {
-  id: number;
+  id: string;
 }
 
 export type UseContactResult = UseQueryResult<Contact, Error>;

@@ -1,3 +1,4 @@
+import { Toaster } from 'react-hot-toast';
 import { createRootRoute, Outlet } from '@tanstack/react-router';
 import { SidebarContainer } from '@containers/SidebarContainer';
 
@@ -9,6 +10,7 @@ export const Route = createRootRoute({
         <div className="w-full h-full p-2">
           <Outlet />
         </div>
+        <Toaster />
       </div>
     </>
   ),

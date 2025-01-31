@@ -6,7 +6,6 @@ import type { ContactListProps } from './types';
 export const ContactList: FC<ContactListProps> = ({ contacts, className }) => {
   const { id: selectedId } = useParams({ strict: false });
 
-  console.log('selectedId', typeof selectedId);
   return (
     <div
       className={clsx(

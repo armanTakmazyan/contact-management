@@ -1,4 +1,4 @@
-import { type FC, type ChangeEventHandler, useState, useCallback } from 'react';
+import { type FC, type ChangeEventHandler, useState } from 'react';
 import { SidebarToolbar } from '@/components/SidebarToolbar/SidebarToolbar';
 import { ContactListContainer } from '@containers/ContactListContainer';
 import { useDebouncedValue } from '@/hooks/useDebouncedValue';

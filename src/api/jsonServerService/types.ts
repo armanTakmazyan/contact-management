@@ -17,7 +17,7 @@ export type FetchContactsResult = Promise<Contact[]>;
 export type FetchContacts = (args?: FetchContactsArgs) => FetchContactsResult;
 
 export interface FetchContactByIdArgs {
-  id: number;
+  id: string;
 }
 
 export type FetchContactByIdResult = Promise<Contact>;
@@ -26,8 +26,14 @@ export type FetchContactById = (
   args: FetchContactByIdArgs,
 ) => FetchContactByIdResult;
 
+export interface CreateContactArgs {
+  newContact: Omit<Contact, 'id'>;
+}
+
+export type CreateContactResult = (args: CreateContactArgs) => Promise<Contact>;
+
 export interface UpdateContactArgs {
-  id: number;
+  id: string;
   updatedData: Partial<Contact>;
 }
 
@@ -36,7 +42,7 @@ export type UpdateContactResult = Promise<Contact>;
 export type UpdateContact = (args: UpdateContactArgs) => UpdateContactResult;
 
 export interface DeleteContactArgs {
-  id: number;
+  id: string;
 }
 
 export type DeleteContactResult = Promise<void>;

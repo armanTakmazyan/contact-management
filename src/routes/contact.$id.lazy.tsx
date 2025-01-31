@@ -5,29 +5,23 @@ import {
   ContactNotFound,
   ContactInformation,
 } from '@components/ContactInformation';
-
-const contacts = [
-  {
-    id: '1',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
-    fullName: 'Henri Helvetica',
-    username: 'HenriHelvetica',
-    description: 'How To WebPageTest',
-  },
-  {
-    id: '2',
-    image: 'https://randomuser.me/api/portraits/women/45.jpg',
-    fullName: 'Sarah Dayan',
-    username: 'SarahDayan',
-    description: 'Front-End Engineer at Algolia',
-  },
-];
+import { useContact } from '@hooks/useContact';
 
 const ContactPage: FC = () => {
-  const { id } = useParams({ strict: false });
+  const { id = '' } = useParams({ strict: false });
   const [isEditing, setIsEditing] = useState(false);
 
-  const contact = contacts.find((c) => c.id === id);
+  const { data: contact, isLoading, error } = useContact({ id });
+
+  if (isLoading) return <div>Loading...</div>;
+
+  if (error) {
+    return (
+      <p className="text-red-500 text-base text-center mt-2">
+        Failed to load contact.
+      </p>
+    );
+  }
 
   if (!contact) {
     return <ContactNotFound />;
