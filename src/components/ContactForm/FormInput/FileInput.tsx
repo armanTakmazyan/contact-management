@@ -1,4 +1,4 @@
-import { FC, useState, useRef } from 'react';
+import { type FC, useState, useRef } from 'react';
 import clsx from 'clsx';
 import { File as FileIcon } from '@icons/File';
 import { INPUT_BASE_STYLES, FILE_INPUT_ACCEPTED_TYPES } from './constants';

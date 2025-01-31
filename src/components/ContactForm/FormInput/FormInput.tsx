@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { FileInput } from './FileInput';
 import { INPUT_BASE_STYLES } from './constants';
 import type { FormInputProps } from './types';

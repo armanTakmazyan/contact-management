@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,css,html,json,json5}'",
-    "db:server": "json-server --watch db.json5 --port 3001"
+    "db:server": "json-server --watch db.json --port 3001"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.1",
@@ -18,7 +18,8 @@
     "@tanstack/react-router": "^1.98.3",
     "axios": "^1.7.9",
     "clsx": "^2.1.1",
-    "json-server": "^1.0.0-beta.3",
+    "json-server": "0.17.4",
+    "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^4.0.1",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@tanstack/router-plugin": "^1.98.3",
+    "@types/lodash": "^4.17.15",
     "@types/node": "^22.12.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",

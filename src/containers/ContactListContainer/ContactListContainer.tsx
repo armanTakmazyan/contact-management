@@ -1,8 +1,12 @@
+import type { FC } from 'react';
 import { ContactListSkeleton, ContactList } from '@components/ContactList';
 import { useContacts } from '@hooks/useContacts';
+import { ContactListContainerProps } from './types';
 
-export const ContactListContainer = () => {
-  const { data: contacts, isLoading, error } = useContacts();
+export const ContactListContainer: FC<ContactListContainerProps> = ({
+  searchQuery,
+}) => {
+  const { data: contacts, isLoading, error } = useContacts({ searchQuery });
 
   if (isLoading) return <ContactListSkeleton className="h-full" />;
 

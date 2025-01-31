@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { useForm } from '@tanstack/react-form';
 import { PrimaryButton } from '@components/Buttons/PrimaryButton';
 import { DangerButton } from '@components/Buttons/DangerButton';

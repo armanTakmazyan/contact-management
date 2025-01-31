@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import type { ContactInformationProps } from './types';
 import { PrimaryButton } from '@components/Buttons/PrimaryButton';
 import { DangerButton } from '@components/Buttons/DangerButton';

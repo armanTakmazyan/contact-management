@@ -1,0 +1,25 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "fullName": "John Doe",
+      "username": "johndoe",
+      "description": "A passionate web developer with a love for coding.",
+      "image": "https://res.cloudinary.com/dhs5qw7lo/image/upload/v1738329322/fvtx4jhqidb74tqgmvda.jpg"
+    },
+    {
+      "id": 2,
+      "fullName": "Jane Smith",
+      "username": "janesmith",
+      "description": "An experienced graphic designer and artist.",
+      "image": "https://res.cloudinary.com/dhs5qw7lo/image/upload/v1738329322/fvtx4jhqidb74tqgmvda.jpg"
+    },
+    {
+      "id": 3,
+      "fullName": "Alice Johnson",
+      "username": "alicej",
+      "description": "A creative writer who enjoys storytelling and poetry.",
+      "image": "https://res.cloudinary.com/dhs5qw7lo/image/upload/v1738329322/fvtx4jhqidb74tqgmvda.jpg"
+    }
+  ]
+}

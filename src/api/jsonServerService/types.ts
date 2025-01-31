@@ -8,9 +8,13 @@ export interface Contact {
 
 export type Contacts = Contact[];
 
+export interface FetchContactsArgs {
+  searchQuery?: string;
+}
+
 export type FetchContactsResult = Promise<Contact[]>;
 
-export type FetchContacts = () => FetchContactsResult;
+export type FetchContacts = (args?: FetchContactsArgs) => FetchContactsResult;
 
 export interface FetchContactByIdArgs {
   id: number;

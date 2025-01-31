@@ -3,10 +3,10 @@ import { fetchContacts } from '@api/jsonServerService';
 import { Contacts } from '@api/jsonServerService/types';
 import { UseContacts } from './types';
 
-export const useContacts: UseContacts = () => {
+export const useContacts: UseContacts = ({ searchQuery = '' } = {}) => {
   const result = useQuery<Contacts>({
-    queryKey: ['contacts'],
-    queryFn: fetchContacts,
+    queryKey: ['contacts', searchQuery],
+    queryFn: () => fetchContacts({ searchQuery }),
   });
 
   return result;

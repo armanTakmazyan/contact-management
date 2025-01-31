@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 import { createLazyFileRoute } from '@tanstack/react-router';
 import { ContactStartScreen } from '@components/ContactStartScreen';
 

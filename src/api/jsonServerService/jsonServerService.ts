@@ -9,9 +9,14 @@ import {
   DeleteContact,
 } from './types';
 
-export const fetchContacts: FetchContacts = async (): Promise<Contact[]> => {
+export const fetchContacts: FetchContacts = async ({
+  searchQuery = '',
+} = {}): Promise<Contact[]> => {
   const response: AxiosResponse<Contact[]> = await jsonServerClient.get(
     JSON_SERVER_API_ROUTES.CONTACTS,
+    {
+      params: searchQuery ? { fullName_like: searchQuery } : {},
+    },
   );
   return response.data;
 };
