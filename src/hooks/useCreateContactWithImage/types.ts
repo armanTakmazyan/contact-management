@@ -1,10 +1,19 @@
+import { Contact } from '@api/jsonServerService/types';
 import type { ContactFormValues } from '@/components/ContactForm/types';
-import { UseMutationResult } from '@tanstack/react-query';
+import { UseMutationOptions, UseMutationResult } from '@tanstack/react-query';
 
 export type UseCreateContactWithImageResult = UseMutationResult<
-  void,
+  Contact,
   Error,
   ContactFormValues
 >;
 
-export type UseCreateContactWithImage = () => UseCreateContactWithImageResult;
+export type UseCreateContactWithImageArgs = UseMutationOptions<
+  Contact,
+  Error,
+  ContactFormValues
+>;
+
+export type UseCreateContactWithImage = (
+  args?: UseCreateContactWithImageArgs,
+) => UseCreateContactWithImageResult;

@@ -4,7 +4,9 @@ import { useUploadImageToCloudinary } from '@hooks/useUploadImageToCloudinary';
 import { useCreateContact } from '@hooks/useCreateContact';
 import { UseCreateContactWithImage } from './types';
 
-export const useCreateContactWithImage: UseCreateContactWithImage = () => {
+export const useCreateContactWithImage: UseCreateContactWithImage = (
+  options = {},
+) => {
   const { mutateAsync: uploadImageToCloudinary } = useUploadImageToCloudinary();
   const { mutateAsync: createContact } = useCreateContact();
 
@@ -18,13 +20,16 @@ export const useCreateContactWithImage: UseCreateContactWithImage = () => {
 
       const cloudinaryImage = await uploadImageToCloudinary({ imageFile });
 
-      await createContact({
+      const contact = await createContact({
         newContact: {
           ...newContact,
           image: cloudinaryImage.url,
         },
       });
+
+      return contact;
     },
+    ...options,
   });
 
   return result;

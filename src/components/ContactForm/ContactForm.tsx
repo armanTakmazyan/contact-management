@@ -12,6 +12,7 @@ export const ContactForm: FC<ContactFormProps> = ({
   onCancel,
   formTitle = 'Edit Contact',
   submitText = 'Save',
+  cancelText = 'Cancel',
 }) => {
   const form = useForm({
     defaultValues: {
@@ -20,9 +21,7 @@ export const ContactForm: FC<ContactFormProps> = ({
       description: initialValues.description ?? '',
       image: initialValues.image,
     },
-    onSubmit: async ({ value }) => {
-      onSubmit(value);
-    },
+    onSubmit,
     validators: {
       onSubmit: contactSchema,
     },
@@ -79,14 +78,23 @@ export const ContactForm: FC<ContactFormProps> = ({
           selector={(state) => [state.canSubmit, state.isSubmitting]}
         >
           {([canSubmit, isSubmitting]) => (
-            <PrimaryButton type="submit" disabled={!canSubmit}>
-              {isSubmitting ? 'Processing...' : submitText}
-            </PrimaryButton>
+            <>
+              <PrimaryButton
+                type="submit"
+                disabled={!canSubmit || isSubmitting}
+              >
+                {isSubmitting ? 'Processing...' : submitText}
+              </PrimaryButton>
+              <DangerButton
+                type="button"
+                onClick={onCancel}
+                disabled={isSubmitting}
+              >
+                {cancelText}
+              </DangerButton>
+            </>
           )}
         </form.Subscribe>
-        <DangerButton type="button" onClick={onCancel}>
-          Cancel
-        </DangerButton>
       </div>
     </form>
   );

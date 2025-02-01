@@ -1,4 +1,4 @@
-import { UseMutationResult } from '@tanstack/react-query';
+import { UseMutationOptions, UseMutationResult } from '@tanstack/react-query';
 import { DeleteContactArgs } from '@api/jsonServerService/types';
 
 export type UseDeleteContactResult = UseMutationResult<
@@ -7,4 +7,12 @@ export type UseDeleteContactResult = UseMutationResult<
   DeleteContactArgs
 >;
 
-export type UseDeleteContact = () => UseDeleteContactResult;
+export type UseDeleteContactArgs = UseMutationOptions<
+  void,
+  Error,
+  DeleteContactArgs
+>;
+
+export type UseDeleteContact = (
+  args?: UseDeleteContactArgs,
+) => UseDeleteContactResult;
